@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinator"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeActivity">
+    <com.google.android.material.appbar.AppBarLayout
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="8dp">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title=""
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textStyle="bold"
+                        android:text="MotionInLove"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:id="@+id/ivHomeProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_account_circle"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.mikelau.views.shimmer.ShimmerRecyclerViewX
+            android:id="@+id/rvHome"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_home"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:shimmer_demo_child_count="1"
+            app:shimmer_demo_layout="@layout/item_home_demo"
+            app:shimmer_demo_layout_manager_type="linear_horizontal"
+            app:shimmer_demo_angle="20">
+
+    </com.mikelau.views.shimmer.ShimmerRecyclerViewX>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
